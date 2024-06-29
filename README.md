@@ -29,7 +29,7 @@ You should provide your own custom `userdata.yaml` as script parameter and custo
 ## Download
 One line powershell command
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; $r='hyperv-vm-provisioning'; iwr -Uri 'https://github.com/schtritoff/hyperv-vm-provisioning/archive/master.zip' -UseBasicParsing -OutFile "$r.zip" ; Expand-Archive "$r.zip" -Force ; Remove-Item "$r.zip" -Force
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; $r='hyperv-vm-provisioning'; iwr -Uri 'https://github.com/alwaystuck/hyperv-vm-provisioning/archive/master.zip' -UseBasicParsing -OutFile "$r.zip" ; Expand-Archive "$r.zip" -Force ; Remove-Item "$r.zip" -Force
 ```
 
 ## Troubleshooting
