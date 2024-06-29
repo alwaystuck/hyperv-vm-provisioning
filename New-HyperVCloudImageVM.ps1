@@ -982,6 +982,7 @@ Write-Host "Prepare virtual disk..." -NoNewline
 try {
   # block size bytes per recommendation https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/best-practices-for-running-linux-on-hyper-v
   Convert-VHD -Path "$($ImageCachePath)\$($ImageOS)-$($stamp).vhd" -DestinationPath $VMDiskPath -VHDType Dynamic -BlockSizeBytes 1MB
+  Resize-VHD -Path $VMDiskPath -SizeBytes $VHDSizeBytes
   Write-Host -ForegroundColor Green " Done."
   if ($VHDSizeBytes -and ($VHDSizeBytes -gt 30GB)) {
     Write-Host "Resize VHD to $([int]($VHDSizeBytes / 1024 / 1024 / 1024)) GB..." -NoNewline
